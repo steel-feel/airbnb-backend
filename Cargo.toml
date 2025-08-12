@@ -1,0 +1,12 @@
+[package]
+name = "airbnb-backend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "^4"
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+dotenvy = "^0.15"
+sqlx = { version = "^0.8", features = ["postgres", "tls-native-tls","runtime-tokio" ,"macros"] }
