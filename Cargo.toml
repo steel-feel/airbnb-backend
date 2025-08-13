@@ -1,12 +1,31 @@
 [package]
 name = "airbnb-backend"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 actix-web = "^4"
+actix-cors = "^0.7"
+actix-session = "^0.8"
+actix-identity = "^0.6"
 
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 dotenvy = "^0.15"
-sqlx = { version = "^0.8", features = ["postgres", "tls-native-tls","runtime-tokio" ,"macros"] }
+sqlx = { version = "^0.8", features = ["postgres", "tls-native-tls","runtime-tokio" ,"macros", "uuid", "time", "bigdecimal"] }
+
+tokio = { version = "1", features = ["full"] }
+time = { version = "0.3", features = ["serde", "serde-well-known"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+bcrypt = "^0.15"
+jsonwebtoken = "^9"
+validator = { version = "0.16", features = ["derive"] }
+thiserror = "^1"
+anyhow = "^1"
+tracing = "^0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+env_logger = "^0.11"
+log = "^0.4"
+
+# For pagination
+pagination = "^0.1"
